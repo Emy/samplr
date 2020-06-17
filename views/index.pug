@@ -1,0 +1,171 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  meta(name='description' content='')
+  meta(name='author' content='Emy')
+  title Samplr - Landing
+  // Bootstrap core CSS
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://unpkg.com/leaflet@1.6.0/dist/leaflet.css' integrity='sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==' crossorigin='')
+  link(href="/asserts/css/font-awesome.min.css", rel="stylesheet")
+  style.
+    #mapid {
+        width: 500px;
+        height:500px;
+    }
+    .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+    @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+    }
+    }
+    .carousel-inner > .carousel-item > img {
+    height: 100vh;
+    }
+    .item {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+    }
+    .item .slide {
+    position: relative;
+    z-index: -1;
+    }
+    .rectimg {
+        max-width: 500px;
+        max-height:500px;
+    }
+  // Custom styles for this template
+  link(href='/assets/css/carousel.css' rel='stylesheet')
+header
+  nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+    a.navbar-brand(href='/') Samplr
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarCollapse.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item
+          a.nav-link(href='/lab') Lab-Demo
+        li.nav-item
+          a.nav-link(href='/doctor') Doc-Demo
+main(role='main')
+  #myCarousel.carousel.slide(data-ride='carousel')
+    ol.carousel-indicators
+      li.active(data-target='#myCarousel' data-slide-to='0')
+      li(data-target='#myCarousel' data-slide-to='1')
+      li(data-target='#myCarousel' data-slide-to='2')
+    .carousel-inner.item
+      .carousel-item.active
+        img.slide(focusable='false' src='/assets/img/carousel1.jpg')
+        .container
+          .carousel-caption.text-left
+            h1 Fast.
+            p
+              | Samplr is providing instant access to the test results rather than delivering them via postal services.
+      .carousel-item
+        img.slide(focusable='false' src='/assets/img/carousel2.jpg')
+        .container
+          .carousel-caption
+            h1 Modern.
+            p
+              | Samplr is using the most recent technology available to provide a fast and secure environment for its users.
+      .carousel-item
+        img.slide(focusable='false' src='/assets/img/carousel3.jpg')
+        .container
+          .carousel-caption.text-right
+            h1 Easy.
+            p Test results are only one click away. Doesn&apos;t matter where you are.
+    a.carousel-control-prev(href='#myCarousel' role='button' data-slide='prev')
+      span.carousel-control-prev-icon(aria-hidden='true')
+      span.sr-only Previous
+    a.carousel-control-next(href='#myCarousel' role='button' data-slide='next')
+      span.carousel-control-next-icon(aria-hidden='true')
+      span.sr-only Next
+  //
+    Marketing messaging and featurettes
+    ==================================================
+  // Wrap the rest of the page in another container to center all the content.
+  .container.marketing
+    // Three columns of text below the carousel
+    .row
+      .col-lg-4
+        img.bd-placeholder-img.rounded-circle(width='140' height='140' src='/assets/img/laborist.png')
+        h2 Greg Miller
+        p
+          | Samplr has made my daily workflow a lot faster and easier! Inserting my results into the revolutionary user interface is way faster than writing them into paper forms.
+      // /.col-lg-4
+      .col-lg-4
+        img.bd-placeholder-img.rounded-circle(width='140' height='140' src='/assets/img/doctor.png')
+        h2 Dr. Thomas Holland
+        p
+          | With Samplr I can stop worrying about keeping all the paperwork organized. I review all test results through the innovative website and have increased the testing capacity due to not having to wait for the results.
+      // /.col-lg-4
+      .col-lg-4
+        img.bd-placeholder-img.rounded-circle(width='140' height='140' src='/assets/img/patient.png')
+        h2 Lisa Smith
+        p
+          | Thanks to Samplr I can finally understand all the numbers on my blood tests without having to study medicine. I think more GP&apos;s should use Samplr in their Clinic!
+      // /.col-lg-4
+    // /.row
+    // START THE FEATURETTES
+    hr.featurette-divider
+    .row.featurette
+      .col-md-7
+        h2.featurette-heading
+          | Like what you see?
+          br
+          span.text-muted Get in touch with our sales team.
+        p.lead
+          br
+          a.btn.btn-lg.btn-secondary(href="mailto:sales@samplr.emy.moe") Send an Email
+      .col-md-5
+        img.bd-placeholder-img.bd-placeholder-img-lg.featurette-image.img-fluid.mx-auto(src="/assets/img/sales.jpg")
+    hr.featurette-divider
+    .row.featurette
+      .col-md-7.order-md-2
+        h2.featurette-heading
+          | Who are we?
+          br
+          span.text-muted See for yourself.
+        p.lead
+          | We are a small team of motivated and innovative people that enjoy making lives easier with technology we invent.
+      .col-md-5.order-md-1
+        img.bd-placeholder-img.bd-placeholder-img-lg.featurette-image.img-fluid.mx-auto(src="/assets/img/team.jpg")
+    hr.featurette-divider
+    .row.featurette
+      .col-md-7
+        h2.featurette-heading
+          | Come over.
+        p.lead
+          | If you would like to meet us before doing business you can meet us in the heart of Constance!
+      .col-md-5
+        div.bd-placeholder-img.featurette-image.img-fluid.mx-auto(id="mapid")
+    hr.featurette-divider
+    // /END THE FEATURETTES
+  // /.container
+  // FOOTER
+  footer.container
+    p.float-right
+      a(href='#') Back to top
+    p
+      | &copy; 2020 Samplr Inc. 
+      //- &middot; 
+      //- a(href='#') Privacy
+      //- |  &middot; 
+      //- a(href='#') Terms
+// JS, Popper.js, and jQuery
+script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous')
+script(src='https://unpkg.com/leaflet@1.6.0/dist/leaflet.js' integrity='sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==' crossorigin='')
+script.
+    var mymap = L.map('mapid').setView([47.668603, 9.169128], 16);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(mymap);
+    L.marker([47.668603, 9.169128]).addTo(mymap).bindPopup('<b>Samplr Inc.</b><br>Paul-und-Gretel-Dietrich Straße<br>78462 Konstanz').openPopup();
+script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js' integrity='sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI' crossorigin='anonymous')
+script(src='https://getbootstrap.com/docs/4.5/dist/js/bootstrap.bundle.min.js' integrity='sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd' crossorigin='anonymous')

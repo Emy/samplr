@@ -1,0 +1,28 @@
+form(method="post")
+  input(name="id" value=patient._id hidden)
+  label(for='fname') First name:
+  br
+  input#fname(type='text' name='firstName' value=patient.firstName)
+  br
+  label(for='lname') Last name:
+  br
+  input#lname(type='text' name='lastName' value=patient.lastName)
+  br
+  label(for='gender') Gender:
+  br
+  select#gender(name='gender')
+    each val, key in gender
+      if val == patient.gender
+        option(value=val selected)= val
+      else
+        option(value=val)= val
+  br
+  label(for='height') Height:
+  br
+  input#height(type='text' name='height' value=patient.height)
+  br
+  label(for='weight') Weight:
+  br
+  input#weight(type='text' name='weight' value=patient.weight)
+  br
+  button(type="submit") Submit

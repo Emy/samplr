@@ -1,0 +1,16 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+      "outDir": "build",
+      "target": "esnext",
+      "module": "commonjs",
+      "strict": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "noImplicitAny": true,
+    },
+    "exclude": [
+      "node_modules",
+      "build"
+    ]
+  }
