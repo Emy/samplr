@@ -1,0 +1,21 @@
+include navbar.pug
+br
+form.form-group#form1(method="post")
+    label(for='Name') Name:
+    br
+    input.form-control#Name.box(type='text')
+    br
+    label(for='Email') Email:
+    br
+    input.form-control#Email.box(type='text')
+    br
+    label(for='Subject') Subject:
+    br
+    input.form-control#Subject.box(type='text')
+    br
+    label(for='Message') Message:
+    br
+    textarea.form-control#message(type='text')
+    br
+    br
+    button.btn.btn-primary(type='submit' value='Submit') Submit

@@ -1,0 +1,50 @@
+include navbar.pug
+br
+.form-group
+  form(method='post')
+    input(hidden name='id' value=test._id)
+    label(for='firstName') First name:
+    br
+    input.form-control#firstName.box(readonly type='text' value=test.patient.firstName)
+    br
+    label(for='lastName') Last name:
+    br
+    input.form-control#lastName.box(readonly type='text' value=test.patient.lastName)
+    br
+    label(for='rbc') Red Blood Cells (men 4,8-5,9 Mio/µl | women 4,3-5,2 Mio/µl):
+    br
+    input.form-control#rbc.box(type='text' name='rbc')
+    br
+    label(for='wbc') White Blood Cells ():
+    br
+    input.form-control#wbc.box(type='text' name='wbc')
+    br
+    label(for='ntp') Neutrophiles (50-65%):
+    br
+    input.form-control#ntp.box(type='text' name='ntp')
+    br
+    label(for='glc') Granulocytes ():
+    br
+    input.form-control#glc.box(type='text' name='glc')
+    br
+    label(for='lc') Lymphocytes (25-45%):
+    br
+    input.form-control#rbc.box(type='text' name='lc')
+    br
+    label(for='mc') Monocytes (3-7%):
+    br
+    input.form-control#mc.box(type='text' name='mc')
+    br
+    label(for='esp') Eosinophiles (1-4%):
+    br
+    input.form-control#esp.box(type='text' name='esp')
+    br
+    label(for='bsp') Basophiles (0-1%):
+    br
+    input.form-control#bsp.box(type='text' name='bsp')
+    br
+    label(for='pl') Platelets (150.000 - 400.000/µl):
+    br
+    input.form-control#pl.box(type='text' name='pl')
+    br
+    button.btn.btn-primary(type='submit' value='Submit') Submit

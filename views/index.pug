@@ -1,59 +1,4 @@
-doctype html
-head
-  meta(charset='utf-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-  meta(name='description' content='')
-  meta(name='author' content='Emy')
-  title Samplr - Landing
-  // Bootstrap core CSS
-  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk' crossorigin='anonymous')
-  link(rel='stylesheet' href='https://unpkg.com/leaflet@1.6.0/dist/leaflet.css' integrity='sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==' crossorigin='')
-  link(href="/asserts/css/font-awesome.min.css", rel="stylesheet")
-  style.
-    #mapid {
-        width: 500px;
-        height:500px;
-    }
-    .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    }
-    @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-    }
-    }
-    .carousel-inner > .carousel-item > img {
-    height: 100vh;
-    }
-    .item {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
-    }
-    .item .slide {
-    position: relative;
-    z-index: -1;
-    }
-    .rectimg {
-        max-width: 500px;
-        max-height:500px;
-    }
-  // Custom styles for this template
-  link(href='/assets/css/carousel.css' rel='stylesheet')
-header
-  nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
-    a.navbar-brand(href='/') Samplr
-    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
-      span.navbar-toggler-icon
-    #navbarCollapse.collapse.navbar-collapse
-      ul.navbar-nav.mr-auto
-        li.nav-item
-          a.nav-link(href='/lab') Lab-Demo
-        li.nav-item
-          a.nav-link(href='/doctor') Doc-Demo
+include navbar.pug
 main(role='main')
   #myCarousel.carousel.slide(data-ride='carousel')
     ol.carousel-indicators
@@ -155,10 +100,10 @@ main(role='main')
       a(href='#') Back to top
     p
       | &copy; 2020 Samplr Inc. 
-      //- &middot; 
-      //- a(href='#') Privacy
-      //- |  &middot; 
-      //- a(href='#') Terms
+      | &middot; 
+      a(href='imprint') Imprint
+      |  &middot; 
+      a(href='contactus') Contact us
 // JS, Popper.js, and jQuery
 script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous')
 script(src='https://unpkg.com/leaflet@1.6.0/dist/leaflet.js' integrity='sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==' crossorigin='')

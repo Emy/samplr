@@ -1,16 +1,18 @@
-form(method="post")
-  input(name="id" value=patient._id hidden)
+include navbar.pug
+br
+form.form-group(method="post")
+  input.form-control(name="id" value=patient._id hidden)
   label(for='fname') First name:
   br
-  input#fname(type='text' name='firstName' value=patient.firstName)
+  input.form-control#fname(type='text' name='firstName' value=patient.firstName)
   br
   label(for='lname') Last name:
   br
-  input#lname(type='text' name='lastName' value=patient.lastName)
+  input.form-control#lname(type='text' name='lastName' value=patient.lastName)
   br
   label(for='gender') Gender:
   br
-  select#gender(name='gender')
+  select.form-control#gender(name='gender')
     each val, key in gender
       if val == patient.gender
         option(value=val selected)= val
@@ -19,10 +21,10 @@ form(method="post")
   br
   label(for='height') Height:
   br
-  input#height(type='text' name='height' value=patient.height)
+  input.form-control#height(type='text' name='height' value=patient.height)
   br
   label(for='weight') Weight:
   br
-  input#weight(type='text' name='weight' value=patient.weight)
+  input.form-control#weight(type='text' name='weight' value=patient.weight)
   br
-  button(type="submit") Submit
+  button.btn.btn-primary(type="submit") Submit

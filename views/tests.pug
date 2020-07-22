@@ -4,7 +4,6 @@ h1 Tests
 table.table.table-striped.table-bordered(id="dt")
   thead
     tr
-      th ID
       th State
       th First name
       th Last name
@@ -13,17 +12,16 @@ table.table.table-striped.table-bordered(id="dt")
   tbody
     each obj in tests
       tr
-        td= obj._id
         td
-          span.badge.badge-secondary= obj.state
+          span.badge.badge-success= obj.state
         td= obj.patient.firstName
         td= obj.patient.lastName
         td 
           span.badge.badge-info= obj.patient.gender
         td
-          a.btn.btn-primary.fa.fa.fa-pencil(href="/lab/test/fill/" + obj._id)
+          a.btn.btn-primary.fa.fa.fa-eye(href="/doctor/test/view/" + obj._id)
           | 
-          a.btn.btn-danger.fa.fa.fa-trash(href="/lab/test/delete/" + obj._id)
+          a.btn.btn-danger.fa.fa.fa-trash(href="/doctor/test/delete/" + obj._id)
 script(src="/assets/js/jquery-3.5.1.min.js")
 script(src="/assets/js/jquery.dataTables.min.js")
 script(src="/assets/js/dataTables.bootstrap4.min.js")
