@@ -44,7 +44,9 @@ export default class PackageController {
   @Redirect('/doctor/patients')
   async deletePatient(@Param('id') id: string) {
     const patient = await PatientModel.findById(id);
-    if (patient) await patient.remove();
+    if (!patient) return;
+    await SampleModel.deleteMany({patient: patient});
+    await patient.remove();
     return;
   }
 
