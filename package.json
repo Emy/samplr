@@ -28,7 +28,7 @@
         "class-transformer": "^0.3.1",
         "class-validator": "^0.12.2",
         "dotenv": "^8.2.0",
-        "express": "^4.17.1",
+        "express": "^4.17.3",
         "mongoose": "^5.9.17",
         "nodemailer": "^6.4.10",
         "pug": "^3.0.0",
